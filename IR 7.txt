@@ -12,7 +12,7 @@ for doc_id, text in documents.items():
     for token in text.lower().split():
         inverted_index[token].append(doc_id)
 
-query = "is"
+query = input("Enter your query : ")
 matching_doc_ids = set(inverted_index.get(query.lower(), []))
 
 if matching_doc_ids:
